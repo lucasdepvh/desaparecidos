@@ -13,10 +13,6 @@ Rails.application.routes.draw do
     end
   end
 
-  authenticated :users do
-    root to: 'minha_paginas#index', as: :authenticated_usuario
-  end
-
 
   root :to => "apresentacoes#index"
 
