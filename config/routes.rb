@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users #users/sign_in users/sign_up users/sign_out
   resources :arquivos
-  root :to => "apresentacoes#index"
   resources :minha_paginas
 
   resources :desaparecidos
@@ -13,5 +12,13 @@ Rails.application.routes.draw do
       get 'sobre'
     end
   end
+
+  authenticated :usuario do
+    root to: 'minha_paginas#index', as: :authenticated_usuario
+  end
+
+
+  root :to => "apresentacoes#index"
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

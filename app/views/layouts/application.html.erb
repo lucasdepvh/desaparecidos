@@ -5,26 +5,23 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
 
-  <script src="https://semantic-ui.com/javascript/library/detect.min.js"></script>
-  <script src="https://semantic-ui.com/javascript/library/jquery.min.js"></script>
-  <script src="https://semantic-ui.com/javascript/library/clipboard.min.js"></script>
-  <script src="https://semantic-ui.com/javascript/library/cookie.min.js"></script>
-  <script src="https://semantic-ui.com/javascript/library/easing.min.js"></script>
-  <script src="https://semantic-ui.com/javascript/library/highlight.min.js"></script>
-  <script src="https://semantic-ui.com/javascript/library/history.min.js"></script>
-  <script src="https://semantic-ui.com/javascript/library/underscore.min.js"></script>
-  <script src="https://semantic-ui.com/javascript/library/tablesort.min.js"></script>
+  <%= javascript_include_tag "//semantic-ui.com/javascript/library/detect.min.js", 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag "//semantic-ui.com/javascript/library/jquery.min.js", 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag "//semantic-ui.com/javascript/library/clipboard.min.js", 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag "//semantic-ui.com/javascript/library/cookie.min.js", 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag "//semantic-ui.com/javascript/library/easing.min.js", 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag "//semantic-ui.com/javascript/library/highlight.min.js", 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag "//semantic-ui.com/javascript/library/history.min.js", 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag "//semantic-ui.com/javascript/library/underscore.min.js", 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag "//semantic-ui.com/javascript/library/tablesort.min.js", 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag "//semantic-ui.com/dist/semantic.min.js", 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag "//semantic-ui.com/javascript/docs.js", 'data-turbolinks-track': 'reload' %>
 
-  <script src="https://semantic-ui.com/dist/semantic.min.js"></script>
-  <script src="https://semantic-ui.com/javascript/docs.js"></script>
-
-  <link rel="stylesheet" type="text/css" class="ui" href="https://semantic-ui.com/dist/semantic.min.css">
-  <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css" >
-
-
-  <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/stylesheets/docs.css">
-  <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/stylesheets/rtl.css">
-  <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= stylesheet_link_tag "//semantic-ui.com/dist/semantic.min.css", 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css", 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag "//semantic-ui.com/stylesheets/docs.css", 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag "//semantic-ui.com/stylesheets/rtl.css", 'data-turbolinks-track': 'reload' %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
 
 </head>
 
@@ -50,8 +47,8 @@
 </div>
 </body>
 
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js" crossorigin="anonymous"></script>
+<%= javascript_include_tag "//code.jquery.com/jquery-3.1.1.min.js", 'data-turbolinks-track': 'reload' %>
+<%= javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js", 'data-turbolinks-track': 'reload' %>
 <%= javascript_include_tag 'application' %>
 
 </html>

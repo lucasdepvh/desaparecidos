@@ -19,8 +19,12 @@
       Desaparecidos
     </h1>
     <h2>Conheça as pessoas que colaboraram para esse projeto.</h2>
-    <%= link_to 'Logar', user_session_path, class: 'ui huge primary button'  %>
-    <%= link_to 'Cadastrar', new_user_registration_path, class: 'ui huge primary button'  %>
+    <% if current_user.nil? %>
+      <%= link_to 'Logar', user_session_path, class: 'ui huge primary button'  %>
+      <%= link_to 'Cadastrar', new_user_registration_path, class: 'ui huge primary button'  %>
+    <% else %>
+      <%= link_to "deslogar", destroy_user_session_path, method: :delete, class: "ui huge primary button" %>
+    <% end %>
   </div>
 
 </div>
