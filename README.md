@@ -43,4 +43,4 @@ político, sendo que a hospedagem é toda por conta do projeto (ver patrocínio)
 https://opensource-br.slack.com
 
 ### Convite
-https://join.slack.com/t/opensource-br/shared_invite/enQtNDE0NDk2NTU0NzA2LTRhZGJmYjY0MjE3NWE4MDU4ZmY4YmRiNzMwMzk4Mzk3NTcwZGM1YTc5OGE0MjhiOGJlNmE4MTUwYjRmZTYxMzc
+https://join.slack.com/t/opensource-br/shared_invite/enQtNDMzNzIzNzM4Nzg2LTEwM2IyM2ExYjNmYjg3OGJhNDJkNGNiZWMxNTU4NzU4YzE1NWQwZjk1OTQ5MjdkNThhNzg4OGI0NTk5YmM0NmI
