@@ -1,9 +1,8 @@
 class ApresentacoesController < ApplicationController
   layout 'home'
-  def index
 
-  end
-  def colaboradores
+  def index;end
 
-  end
+  def colaboradores;end
+
 end

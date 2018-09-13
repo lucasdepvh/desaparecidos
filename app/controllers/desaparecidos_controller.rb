@@ -10,8 +10,7 @@ class DesaparecidosController < ApplicationController
 
   # GET /usuarios/1
   # GET /usuarios/1.json
-  def show
-  end
+  def show;end
 
   # GET /usuarios/new
   def new
