@@ -1,8 +1,5 @@
 class MinhaPaginasController < ApplicationController
   before_action :set_minha_pagina, only: [:autenticacao, :show, :edit, :update, :destroy]
-  def autenticacao
-    autenticacao
-  end
 
   # GET /minha_paginas
   # GET /minha_paginas.json
@@ -65,13 +62,18 @@ class MinhaPaginasController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_minha_pagina
-      @minha_pagina = MinhaPagina.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_minha_pagina
+    @minha_pagina = MinhaPagina.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def minha_pagina_params
-      params.fetch(:minha_pagina, {})
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def minha_pagina_params
+    params.fetch(:minha_pagina, {})
+  end
+  def autenticacao
+    if current_user.nil?
+      redirect_to apresentacoes_path
     end
+  end
 end

@@ -93,6 +93,13 @@
 
         <div class="header">Configurar</div>
         <a class="item" href="/usuarios/edit">Editar perfil</a>
+        <%= link_to destroy_user_session_path, :method => 'delete', class: 'item' do %>
+            Sair
+        <% end %>
+
+
+
+
       </div>
     </div>
   </div>
