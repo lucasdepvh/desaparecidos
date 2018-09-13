@@ -7,63 +7,46 @@
           <%= f.input :email, required: false, autofocus: true, input_html: {autocomplete: "email", class: 'ui text large form'} %>
         </div>
 
-<<<<<<< HEAD
-  <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-    <div class="ui vertical stripe segment">
-      <div class="ui middle aligned stackable grid container">
-        <div class="eight wide column">
-          <div class="field">
-            <%= f.input :email,
-                        required: false,
-                        autofocus: true,
-                        input_html: {autocomplete: "email"} %>
+        <div class="ui vertical stripe segment">
+          <div class="ui middle aligned stackable grid container">
+            <div class="eight wide column">
+              <div class="field">
+                <%= f.input :email,
+                            required: false,
+                            autofocus: true,
+                            input_html: {autocomplete: "email"} %>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="ui middle aligned stackable grid container">
-        <div class="eight wide column">
-          <div class="field">
-            <%= f.input :password,
-                        required: false,
-                        input_html: {autocomplete: "current-password"} %>
+          <div class="ui middle aligned stackable grid container">
+            <div class="eight wide column">
+              <div class="field">
+                <%= f.input :password,
+                            required: false,
+                            input_html: {autocomplete: "current-password"} %>
+              </div>
+              <div class="ui checkbox">
+                <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-      <div class="form-actions">
-        <%= f.button :submit, "Log in" %>
-      </div>
-  <% end %>
-  </div>
-=======
-        <div class="field">
-          <%= f.input :password, required: false, input_html: {autocomplete: "current-password", class: 'ui text large form sixteen'} %>
-        </div>
-        <div class="ui checkbox">
-          <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+          <div class="form-actions">
+            <%= f.button :submit, "Log in" %>
+          </div>
         </div>
 
-        <div class="actions">
-          <%= f.button :submit, "Log in", class: 'ui fluid large teal submit button' %>
-        </div>
       <% end %>
+
+
+
+      <div class="ui segment" style="text-align: center">
+
+        <%= render "devise/shared/links" %>
+      </div>
+
 
     </div>
   </div>
-
-  <div class="ui segment" style="text-align: center">
-
-    <%= render "devise/shared/links" %>
-  </div>
-
-
 </div>
 
-
-
-
-
-
-
-
->>>>>>> c01966191d7a1da99fafc70aeebf2dba5652ba15
 
