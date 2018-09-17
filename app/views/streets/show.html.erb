@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @street.name %>
+</p>
+
+<p>
+  <strong>Zipcode:</strong>
+  <%= @street.zipcode %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @street.type %>
+</p>
+
+<p>
+  <strong>District:</strong>
+  <%= @street.district %>
+</p>
+
+<%= link_to 'Editar', edit_street_path(@street) %> |
+<%= link_to 'Voltar', streets_path %>

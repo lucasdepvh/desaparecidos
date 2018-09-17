@@ -1,0 +1,47 @@
+<%= form_with(model: street, local: true, class: 'ui form') do |form| %>
+  <% if street.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(street.errors.count, "error") %> prohibited this street from being saved:</h2>
+
+      <ul>
+      <% street.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="ui divider"></div>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :zipcode %>
+    <%= form.text_field :zipcode %>
+  </div>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :district_id %>
+    <%= form.text_field :district_id %>
+  </div>
+
+  <div class="ui divider"></div>
+  <div class="actions text-left">
+    <%= link_to testes_path, class: 'ui basic button' do%>
+        <i class='chevron left icon'></i> VOLTAR
+     <% end %>
+    <%= form.submit :Gravar, class: 'ui primary button' do %>
+     <i class='save icon'></i> GRAVAR
+    <%end%>
+  </div>
+<% end %>
+
+
+

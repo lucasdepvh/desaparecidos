@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 
+  zipcode: 
+  type: 
+  district: one
+
+two:
+  name: 
+  zipcode: 
+  type: 
+  district: two

@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @disappeared.user %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @disappeared.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @disappeared.age %>
+</p>
+
+<p>
+  <strong>Sex:</strong>
+  <%= @disappeared.sex %>
+</p>
+
+<p>
+  <strong>Birthdate:</strong>
+  <%= @disappeared.birthdate %>
+</p>
+
+<p>
+  <strong>Date desapearence:</strong>
+  <%= @disappeared.date_desapearence %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @disappeared.street %>
+</p>
+
+<p>
+  <strong>Mother:</strong>
+  <%= @disappeared.mother %>
+</p>
+
+<p>
+  <strong>Dad:</strong>
+  <%= @disappeared.dad %>
+</p>
+
+<%= link_to 'Editar', edit_disappeared_path(@disappeared) %> |
+<%= link_to 'Voltar', disappeareds_path %>

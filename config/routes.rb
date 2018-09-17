@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
 
+  resources :relations
+  resources :relatives
+  resources :historics
+  resources :disappeareds
+  resources :streets
+  resources :districts
+  resources :cities
+  resources :states
+  resources :countries
+  resources :statuses
   devise_for :users #users/sign_in users/sign_up users/sign_out
-  resources :arquivos
-  resources :minha_paginas
 
-  resources :desaparecidos
   resources :apresentacoes do
     collection do
       get 'colaboradores'
