@@ -17,15 +17,11 @@
     <%= form.text_field :name %>
   </div>
 
-  <div class="ui divider"></div>
-  <div class="actions text-left">
-    <%= link_to testes_path, class: 'ui basic button' do%>
-        <i class='chevron left icon'></i> VOLTAR
+ <div class="row">
+    <%= link_to countries_path, class: 'button' do%>
+        <i>VOLTAR</i> 
+        </div>
      <% end %>
-    <%= form.submit :Gravar, class: 'ui primary button' do %>
-     <i class='save icon'></i> GRAVAR
-    <%end%>
-  </div>
 <% end %>
 
 

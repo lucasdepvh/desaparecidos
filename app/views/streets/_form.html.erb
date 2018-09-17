@@ -32,15 +32,11 @@
     <%= form.text_field :district_id %>
   </div>
 
-  <div class="ui divider"></div>
-  <div class="actions text-left">
-    <%= link_to testes_path, class: 'ui basic button' do%>
-        <i class='chevron left icon'></i> VOLTAR
+ <div class="row">
+    <%= link_to streets_path, class: 'button' do%>
+        <i>VOLTAR</i> 
+        </div>
      <% end %>
-    <%= form.submit :Gravar, class: 'ui primary button' do %>
-     <i class='save icon'></i> GRAVAR
-    <%end%>
-  </div>
 <% end %>
 
 
