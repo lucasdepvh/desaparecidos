@@ -21,6 +21,13 @@
     <%= link_to "Cadastrar", new_user_registration_path, class: "item" %>
     <%= link_to "Login", new_user_session_path, class: "item" %>
     <%= link_to "Buscar", desaparecidos_path, class: "item" %>
+    <div class="item">
+      <div class="ui action left icon input">
+        <i class="search icon"></i>
+        <input type="text" placeholder="Pesquisar">
+        <button class="ui button">Buscar</button>
+      </div>
+    </div>
   </div>
 </div>
 <div class="ui main container">
