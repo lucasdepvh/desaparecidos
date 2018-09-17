@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @historic.description %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @historic.text %>
+</p>
+
+<p>
+  <strong>Disapeared:</strong>
+  <%= @historic.disapeared %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @historic.date %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @historic.status %>
+</p>
+
+<%= link_to 'Editar', edit_historic_path(@historic) %> |
+<%= link_to 'Voltar', historics_path %>

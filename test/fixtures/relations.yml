@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  desapeared: one
+  relative: one
+
+two:
+  user: two
+  desapeared: two
+  relative: two

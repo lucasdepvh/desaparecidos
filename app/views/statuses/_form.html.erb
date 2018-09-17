@@ -1,0 +1,32 @@
+<%= form_with(model: status, local: true, class: 'ui form') do |form| %>
+  <% if status.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(status.errors.count, "error") %> prohibited this status from being saved:</h2>
+
+      <ul>
+      <% status.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="ui divider"></div>
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description %>
+  </div>
+
+  <div class="ui divider"></div>
+  <div class="actions text-left">
+    <%= link_to testes_path, class: 'ui basic button' do%>
+        <i class='chevron left icon'></i> VOLTAR
+     <% end %>
+    <%= form.submit :Gravar, class: 'ui primary button' do %>
+     <i class='save icon'></i> GRAVAR
+    <%end%>
+  </div>
+<% end %>
+
+
+

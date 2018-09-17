@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  text: 
+  disapeared: one
+  date: 2018-09-17 08:16:14
+  status: one
+
+two:
+  description: MyString
+  text: 
+  disapeared: two
+  date: 2018-09-17 08:16:14
+  status: two

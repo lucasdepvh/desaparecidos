@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  name: MyString
+  age: 1
+  sex: MyString
+  birthdate: 2018-09-17
+  date_desapearence: 2018-09-17
+  street: one
+  mother: MyString
+  dad: MyString
+
+two:
+  user: two
+  name: MyString
+  age: 1
+  sex: MyString
+  birthdate: 2018-09-17
+  date_desapearence: 2018-09-17
+  street: two
+  mother: MyString
+  dad: MyString

@@ -1,0 +1,72 @@
+<%= form_with(model: disappeared, local: true, class: 'ui form') do |form| %>
+  <% if disappeared.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(disappeared.errors.count, "error") %> prohibited this disappeared from being saved:</h2>
+
+      <ul>
+      <% disappeared.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="ui divider"></div>
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.text_field :user_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sex %>
+    <%= form.text_field :sex %>
+  </div>
+
+  <div class="field">
+    <%= form.label :birthdate %>
+    <%= form.date_select :birthdate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date_desapearence %>
+    <%= form.date_select :date_desapearence %>
+  </div>
+
+  <div class="field">
+    <%= form.label :street_id %>
+    <%= form.text_field :street_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mother %>
+    <%= form.text_field :mother %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dad %>
+    <%= form.text_field :dad %>
+  </div>
+
+  <div class="ui divider"></div>
+  <div class="actions text-left">
+    <%= link_to testes_path, class: 'ui basic button' do%>
+        <i class='chevron left icon'></i> VOLTAR
+     <% end %>
+    <%= form.submit :Gravar, class: 'ui primary button' do %>
+     <i class='save icon'></i> GRAVAR
+    <%end%>
+  </div>
+<% end %>
+
+
+

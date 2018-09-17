@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Relations</h1>
+
+<table class='ui celled table'>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Desapeared</th>
+      <th>Relative</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @relations.each do |relation| %>
+      <tr>
+        <td><%= relation.user %></td>
+        <td><%= relation.desapeared %></td>
+        <td><%= relation.relative %></td>
+        <td><%= link_to 'Visualizar', relation %></td>
+        <td><%= link_to 'Editar', edit_relation_path(relation) %></td>
+        <td><%= link_to 'Excluir', relation, method: :delete, data: { confirm: 'Você tem certeza que deseja excluir?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Novo Relation', new_relation_path %>

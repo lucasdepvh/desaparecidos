@@ -1,0 +1,37 @@
+<%= form_with(model: city, local: true, class: 'ui form') do |form| %>
+  <% if city.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(city.errors.count, "error") %> prohibited this city from being saved:</h2>
+
+      <ul>
+      <% city.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="ui divider"></div>
+  <div class="field">
+    <%= form.label :state_id %>
+    <%= form.text_field :state_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="ui divider"></div>
+  <div class="actions text-left">
+    <%= link_to testes_path, class: 'ui basic button' do%>
+        <i class='chevron left icon'></i> VOLTAR
+     <% end %>
+    <%= form.submit :Gravar, class: 'ui primary button' do %>
+     <i class='save icon'></i> GRAVAR
+    <%end%>
+  </div>
+<% end %>
+
+
+

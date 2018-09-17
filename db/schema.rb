@@ -10,11 +10,104 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_08_213730) do
+ActiveRecord::Schema.define(version: 2018_09_17_121700) do
+
+  create_table "cities", force: :cascade do |t|
+    t.integer "state_id"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["state_id"], name: "index_cities_on_state_id"
+  end
+
+  create_table "countries", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "disappeareds", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "name"
+    t.integer "age"
+    t.string "sex"
+    t.date "birthdate"
+    t.date "date_desapearence"
+    t.integer "street_id"
+    t.string "mother"
+    t.string "dad"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["street_id"], name: "index_disappeareds_on_street_id"
+    t.index ["user_id"], name: "index_disappeareds_on_user_id"
+  end
+
+  create_table "districts", force: :cascade do |t|
+    t.integer "city_id"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["city_id"], name: "index_districts_on_city_id"
+  end
+
+  create_table "historics", force: :cascade do |t|
+    t.string "description"
+    t.string "text"
+    t.integer "disapeared_id"
+    t.datetime "date"
+    t.integer "status_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["disapeared_id"], name: "index_historics_on_disapeared_id"
+    t.index ["status_id"], name: "index_historics_on_status_id"
+  end
+
+  create_table "relations", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "desapeared_id"
+    t.integer "relative_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["desapeared_id"], name: "index_relations_on_desapeared_id"
+    t.index ["relative_id"], name: "index_relations_on_relative_id"
+    t.index ["user_id"], name: "index_relations_on_user_id"
+  end
+
+  create_table "relatives", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "states", force: :cascade do |t|
+    t.integer "country_id"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["country_id"], name: "index_states_on_country_id"
+  end
+
+  create_table "statuses", force: :cascade do |t|
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "streets", force: :cascade do |t|
+    t.string "name"
+    t.string "zipcode"
+    t.string "type"
+    t.integer "district_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["district_id"], name: "index_streets_on_district_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
+    t.string "telephone", default: "", null: false
+    t.string "address", default: "", null: false
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
