@@ -17,10 +17,10 @@
       <img class="logo" src="https://semantic-ui.com/examples/assets/images/logo.png">
       Desaparecidos
     </a>
-<<<<<<< HEAD
-    <a href="/apresentacoes" class="item">Home</a>
-    <a href="/users/sign_up" class="item">Cadastrar</a>
-    <a href="/users/sign_in" class="item">Login</a>
+    <%= link_to "Home", apresentacoes_path, class: "item" %>
+    <%= link_to "Cadastrar", new_user_registration_path, class: "item" %>
+    <%= link_to "Login", new_user_session_path, class: "item" %>
+    <%= link_to "Buscar", desaparecidos_path, class: "item" %>
     <div class="item">
       <div class="ui action left icon input">
         <i class="search icon"></i>
@@ -28,12 +28,6 @@
         <button class="ui button">Buscar</button>
       </div>
     </div>
-=======
-    <%= link_to "Home", apresentacoes_path, class: "item" %>
-    <%= link_to "Cadastrar", new_user_registration_path, class: "item" %>
-    <%= link_to "Login", new_user_session_path, class: "item" %>
-    <%= link_to "Buscar", desaparecidos_path, class: "item" %>
->>>>>>> 51138a1d9e91f1158bf4dcf509edfc0c8e8ef491
   </div>
 </div>
 <div class="ui main container">
